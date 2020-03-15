@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hola Mundo <code>Fernando Bonifacio Morales</code>.
         </p>
         <a
           className="App-link"
@@ -16,11 +16,24 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+            learn react
         </a>
       </header>
     </div>
   );
 }
 
+
+export default App;/*
+import React, { Component } from 'react';
+
+class App extends Component {
+  render() {
+    return (
+      <h1>Hello World!</h1>
+    );
+  }
+}
+
 export default App;
+*/
