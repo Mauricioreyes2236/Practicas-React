@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 //import App from './App';
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from "./serviceWorker";
 //import HolaMundo from './components/Holamundo';
 //import Stateful from './components/Stateful';
 
@@ -12,11 +12,17 @@ import * as serviceWorker from './serviceWorker';
 
 //import Footer from '../src/components/Footer';
 
-//import Carrusel from './components/carrusel';
+//import Carrusel from './components/Carrusel';
 
-import App from './container/App';
+//import Layout from './container/Layout';
+
+//import App from './container/App';
 
 //import Search from '../src/components/Search';
+
+//import Search from "../src/components/Login";
+import Login from "./container/Login";
+//import Login from "../src/container/App";
 
 //import Stateless from './components/Stateless';
 
@@ -26,9 +32,13 @@ import App from './container/App';
 
 //ReactDOM.render(<Carrusel />, document.getElementById ('root') );
 
-ReactDOM.render(<App />, document.getElementById ('root') );
+//ReactDOM.render(<App />, document.getElementById ('root') );
+
+//ReactDOM.render(<Layout />, document.getElementById ('root') );
 
 //ReactDOM.render(<Search />, document.getElementById ('root') );
+
+ReactDOM.render(<Login />, document.getElementById("root"));
 
 //ReactDOM.render(<HolaMundo />, document.getElementById ('root') );
 
