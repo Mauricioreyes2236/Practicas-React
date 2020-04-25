@@ -21,10 +21,16 @@ import * as serviceWorker from "./serviceWorker";
 //import Search from '../src/components/Search';
 
 //import Search from "../src/components/Login";
-import Login1 from "./container/Login";
+
+//import Login1 from "./container/Login";
+
 //import Login from "../src/container/App";
 
 //import Stateless from './components/Stateless';
+
+import Register from "./container/Register";
+
+ReactDOM.render(<Register />, document.getElementById("root"));
 
 //ReactDOM.render(<Header />, document.getElementById ('root') );
 
@@ -38,7 +44,7 @@ import Login1 from "./container/Login";
 
 //ReactDOM.render(<Search />, document.getElementById ('root') );
 
-ReactDOM.render(<Login />, document.getElementById("root"));
+//ReactDOM.render(<Login />, document.getElementById("root"));
 
 //ReactDOM.render(<HolaMundo />, document.getElementById ('root') );
 
