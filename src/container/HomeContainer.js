@@ -6,7 +6,7 @@ import axios from 'axios';
 class HomeContainer extends Component {
 
     componentDidMount() {
-        axios.get('https://pokeapi.co/api/v2/pokemon/2/').
+        axios.get('https://pokeapi.co/api/v2/pokemon/8/').
             then(result => {
                 console.log(result)
             }).catch(console.log)
