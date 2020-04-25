@@ -12,11 +12,11 @@ import * as serviceWorker from "./serviceWorker";
 
 //import Footer from '../src/components/Footer';
 
-//import Carrusel from './components/Carrusel';
+//import Carrusel from "./components/Carrusel";
 
 //import Layout from './container/Layout';
 
-//import App from './container/App';
+import App from "./container/App";
 
 //import Search from '../src/components/Search';
 
@@ -28,17 +28,17 @@ import * as serviceWorker from "./serviceWorker";
 
 //import Stateless from './components/Stateless';
 
-import Register from "./container/Register";
+//import Register from "./container/Register";
 
-ReactDOM.render(<Register />, document.getElementById("root"));
+//ReactDOM.render(<Register />, document.getElementById("root"));
 
 //ReactDOM.render(<Header />, document.getElementById ('root') );
 
 //ReactDOM.render(<Footer />, document.getElementById ('root') );
 
-//ReactDOM.render(<Carrusel />, document.getElementById ('root') );
+//ReactDOM.render(<Carrusel />, document.getElementById("root"));
 
-//ReactDOM.render(<App />, document.getElementById ('root') );
+ReactDOM.render(<App />, document.getElementById("root"));
 
 //ReactDOM.render(<Layout />, document.getElementById ('root') );
 
