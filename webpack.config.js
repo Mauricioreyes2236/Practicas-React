@@ -5,55 +5,68 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-entry: './src/index.js',
-output:{
-path: path.resolve(__dirname, 'dist'),
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
 
-filename:'bundle.js',
-},
-resolve:{
-    extensions: ['.js','.jsx']
-},
-module:{
-    rules: [{
-        test:/\.(js|jsx)$/,
-        exclude: /node-modules/,
-        use: {
-            loader: 'babel-loader'
-        }
+        filename: 'bundle.js',
     },
-    {
-        test: /\.html$/,
-        use: [ {
-            loader: 'html-loader'
-        } ]
+    resolve: {
+        extensions: ['.js', '.jsx']
     },
-    {
-        test: /\.(s*)css$/,
-        use: [{
-            loader: MiniCssExtractPlugin.loader,
-        },
-        'css-loader',
-        'sass-loader'    
-    ]
-    },
-    {
-        test: /\.(png|gif|jpg)$/,
-        use: [{
-            'loader': 'file-loader',
-            options: {
-                name: 'assets/[hash].[ext]'
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node-modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+            {
+                test: /\.scss$/,
+                uese: {
+                    loader: 'sass-loader',
+                    options: {
+                        includePaths: [
+                            path.resolve('../node_modules'), // @import('jeet/scss/jeet/index')
+                        ]
+                    }
+                }
+            },
+            {
+                test: /\.html$/,
+                use: [{
+                    loader: 'html-loader'
+                }]
+            },
+            {
+                test: /\.(s*)css$/,
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                },
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.(png|gif|jpg)$/,
+                use: [{
+                    'loader': 'file-loader',
+                    options: {
+                        name: 'assets/[hash].[ext]'
+                    }
+                }]
             }
-        }]
-    }
-],
-},    
-        plugins: [
-            new HtmlWebPackPlugin({
-                template: './public/index.html',
-                filename: './index.html'
-            }),
         ],
-        
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: './public/index.html',
+            filename: './index.html'
+        }),
+    ],
+
+
 };
 
